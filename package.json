@@ -1,0 +1,35 @@
+{
+  "name": "angular-webpack",
+  "version": "1.0.0",
+  "description": "Some trying to grab angular project with webpack builder",
+  "main": "webpack.config.js",
+  "dependencies": {
+    "@angular/common": "^5.1.1",
+    "@angular/compiler": "^5.1.1",
+    "@angular/core": "^5.1.1",
+    "@angular/platform-browser": "^5.1.1",
+    "@angular/platform-browser-dynamic": "^5.1.1",
+    "@types/node": "^8.5.1",
+    "angular2-template-loader": "^0.6.2",
+    "awesome-typescript-loader": "^3.4.1",
+    "clean-webpack-plugin": "^0.1.17",
+    "enhanced-resolve": "^4.0.0-beta.2",
+    "html-webpack-plugin": "^2.30.1",
+    "node-sass": "^4.7.2",
+    "raw-loader": "^0.5.1",
+    "rxjs": "^5.5.5",
+    "sass-loader": "^6.0.6",
+    "ts-loader": "^3.2.0",
+    "ts-node": "^4.0.2",
+    "typescript": "^2.6.2",
+    "webpack": "^3.10.0",
+    "zone.js": "^0.8.18"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "webpack-dev-server",
+    "build": "webpack"
+  },
+  "author": "",
+  "license": "ISC"
+}
