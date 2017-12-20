@@ -6,9 +6,7 @@ const CleanWebpackPlugin = require('clean-webpack-plugin');
 
 module.exports = function(env) {
     return {
-        target: "web",
         context: path.resolve(__dirname),
-        // devtool: "inline-sourcemap",
         entry: {
             main: './src/main.ts',
             vendor: [
@@ -24,8 +22,10 @@ module.exports = function(env) {
         },
         output: {
             filename: '[name].bundle.js',
+			chunkFilename: '[name]-chunk.js',
             path: path.resolve(__dirname, 'dist'),
         },
+        devtool: 'source-maps',
         resolve: {
             extensions: ['.ts', '.js'],
             modules: [
@@ -37,8 +37,10 @@ module.exports = function(env) {
             rules: [
                 {
                     test: /\.ts$/,
-                    // loaders: ["ts-loader", 'angular2-template-loader'],
-                    loaders: ["ts-loader"],
+                    loaders: [
+						"ts-loader",
+						"angular-router-loader",
+					],
                     exclude: [
                         /node_modules/,
                     ],
@@ -72,6 +74,7 @@ module.exports = function(env) {
             new webpack.optimize.CommonsChunkPlugin({
 				name: 'vendor',
             }),
+            // new uglify(),
         ]
     };
 };
